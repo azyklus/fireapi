@@ -1,5 +1,8 @@
-fn MakeDefaultClient(token: String) -> DiscordClient:
+fn MakeDefaultDiscordClient(token: String) -> DiscordClient:
    return DiscordClient(token)
+
+fn MakeDefaultMatrixClient(token: String) -> MatrixClient:
+   return MatrixClient(token)
 
 struct DiscordClient:
    var token: String
@@ -9,3 +12,8 @@ struct DiscordClient:
       self.token = token
       self.keepAlive = True
 
+struct MatrixClient:
+   var token: String
+
+   fn __init__(inout self, token: String):
+      self.token = token

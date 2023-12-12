@@ -1,1 +1,1 @@
-from .client import DiscordClient, MakeDefaultClient
+from .client import DiscordClient, MatrixClient, MakeDefaultDiscordClient, MakeDefaultMatrixClient
